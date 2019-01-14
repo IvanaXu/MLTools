@@ -1,0 +1,194 @@
+# @auth ivan
+# @time 2017年5月25日21:03:30
+# @version v0.6
+# TODO：1.具体化;2.快速实现;3.超参数。
+# CHANGE 0.1 添加数据路径。
+# CHANGE 0.2 根据MachineLearning.jpg，整理待完善 TODO···
+# CHANGE 0.3 针对存在问题。
+# CHANGE 0.4 整理统计分布的逻辑。
+# CHANGE 0.5 特征处理实现方法。
+# CHANGE 0.6 补充关于列取值。
+##########################机器学习算法框架##########################
+                           BG:S E M M A
+#################################################################
+
+一、基本框架
+(1)
+            数据类型
+    数据导入|
+            文件格式
+
+(2)
+            统计分布
+    特征探索|值域
+            箱线图
+            TODO：SEABORN
+—————————————————————————————————————————————————————
+
+                         根据给定字段的特殊值，统计值个数
+              是否有特殊值|
+                         无特殊值，给出数据描述
+        数值型|
+        # TODO：整理非缺失值，缺失个数，缺失比例
+            TODO:根据值域，年龄_直接作为字符...
+统计分布|
+              分布
+        字符型|
+
+————————————
+常规人工判断
+-1-缺失值太多 超过50%-【定义缺失比例，超过舍弃】
+-2-特殊值太大 【事先给定 变量/特殊值 NEXT】
+-3-错误值     //TODO:不太好识别
+
+# 数据描述：max min ...
+TODO：超链接(NEXT)
+—————————————————————————————————————————————————————
+# TODO: BEG
+    (2.1)
+            IV
+                  L1
+    特征选择|正则化|
+                  L2
+            RF Importance
+# TODO: END
+
+(3)
+            标准化
+            onehot
+    特征处理|
+            交叉
+            归一化
+# 字符型转换为数值型处理
+
+# TODO: BEG
+    (3.1)
+            WOE
+            标准化
+    特征处理|归一化
+            二值化
+            ONE-HOT ENCODING
+# TODO: END
+
+数值型
+# 归一化
+# dataX1.apply(lambda x: (x-np.min(x))/(np.max(x)-np.min(x)))
+# 标准化 sklearn.preprocessing.scale
+# dataX1.apply(lambda x: (x-np.mean(x))/(np.std(x)))
+# 正则化 sklearn.preprocessing.normailze
+字符型
+# ONEHOT
+# WOE
+# DUMMIES pd.get_dummies()
+# 交叉
+
+(4)
+            混淆矩阵
+            核心算法
+    算法探索|
+            超参数
+            评估指数
+               |（准确率）
+
+# TODO: BEG
+    (4.1)
+            混淆矩阵
+            准确度
+            精度
+    模型评估|
+            召回率
+            F1
+            AUC
+# TODO: 二维表
+
+    (4.2)
+                      RNN
+            深度学习  |CNN
+                      LSTM
+
+            强化学习  |Q Learning
+
+                      逻辑回归
+                      线性回归
+                      决策树
+                      随机森林
+                      朴素贝叶斯
+     核心算法|有监督学习|
+                      GBDT
+                      SVM
+                      KNN
+                      LDA
+                      NN
+                      AdaBoost
+
+                      聚类
+            无监督学习|PCA
+                      FA
+
+            半监督学习|
+
+# TODO: END
+
+(5)
+            算法调用
+    算法导出|
+            算法保存
+# TODO：pickle
+二、实现模块
+(1)Load
+数据加载
+    load_data
+(2)
+特征探索
+    feature_explore
+(3)
+特征预处理
+    feature_preprocessing
+(4)classifier
+选择最优算法
+    algorithm_selectio
+算法评估
+    algorithm_access
+(5)
+算法保存
+    algorithm_save
+
+三、数据
+(1)测试数据
+【信用卡催收评分样本】样本数据路径:
+G:\\OUT\\07.AI\\MachineLearning\\data\\m1m2_sample.txt
+G:\\OUT\\07.AI\\MachineLearning\\data\\m1m2_sample.csv
+# 暂无 #G:\\OUT\\07.AI\\MachineLearning\\data\\m1m2_sample.xls
+
+【信用卡催收评分样本】测试数据路径:
+G:\\OUT\\07.AI\\MachineLearning\\data\\m1m2_sample_T200.txt
+G:\\OUT\\07.AI\\MachineLearning\\data\\m1m2_sample_T200(MISS).csv(缺失)
+# 变量
+#    R_POS_CNT_16_Pct_Avg_POS_CNT_1N(6个缺失值)
+#    R_Con_Incs_in_INC_Pay_P_BAL    (2个缺失值)
+
+G:\\OUT\\07.AI\\MachineLearning\\data\\m1m2_sample_T200.csv(原完整)
+
+G:\\OUT\\07.AI\\MachineLearning\\data\\m1m2_sample.xls
+G:\\OUT\\07.AI\\MachineLearning\\data\\m1m2_sample.sas7bdat
+
+(2)字段名
+G:\OUT\07.AI\MachineLearning\data\FIELDS
+
+(3)输出结果
+【1.数据描述结果】
+G:\OUT\07.AI\MachineLearning\out\fieldsYYYYMMDD_RRRRRR.log
+
+四、代码日志
+(1)对于数据集，请勿重复读取，否则读取时耗太多。
+(2)区分部分处理环节，要保留在后续完善。
+(3)关于列取值
+# l_in ['1', '2']
+(1_pd.Series):dataX.loc[:, l_in]
+(2_pd.DataFrame):dataX[l_in]
+
+五、待解决问题
+(1)直接读取sas文件问题
+(2)数据文件过大
+(3)保存模型
+
