@@ -23,8 +23,8 @@ def randoms(n):
         return str(random.randint(100000, 999999))
 
 # csv xls sas7bdat
-data_path = u'/data/project/GitHubI/MLTEST/data/'
-out_path = u'/data/project/GitHubI/MLTEST/out/'
+data_path = u'/data/project/GitHubI/MLTools/data/'
+out_path = u'/data/project/GitHubI/MLTools/out/'
 
 data_Name = u'm1m2_sample'
 data_Tame = u'm1m2_sample_T200(MISS)'

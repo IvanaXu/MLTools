@@ -88,8 +88,7 @@ class Classifier(object):
         self.info(self.y_test)
 
         self.classifiers = [
-            # naive_bayes_classifier,
-
+            naive_bayes_classifier,
             decision_tree_classifier,
             random_forest_classifier,
             # random_forest_classifier_other,
@@ -97,8 +96,8 @@ class Classifier(object):
             gradient_boosting_classifier,
             logistic_regression_classifier,
 
-            # knn_classifier,
-            # svm_classifier,
+            knn_classifier,
+            svm_classifier,
 
             # logistic_regression_classifier_other,
             # gradient_boosting_classifier_good,
@@ -214,7 +213,7 @@ class Classifier(object):
         print('0%%: %.2f%%' % (data[data == 0].shape[0]/data.shape[0]*100))
 
 
-Classifier('/data/project/GitHubI/MLTEST/data/test.csv')
+Classifier('/data/project/GitHubI/MLTools/data/test.csv')
 
 
 
