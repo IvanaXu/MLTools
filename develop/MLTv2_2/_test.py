@@ -61,7 +61,7 @@ from load_data import Load
 
 L = Load(utils.data_T)
 print(L.dataY)
-L.test()
+L.tPatterns()
 
 # RESULT NORMAL
 """
@@ -1098,7 +1098,7 @@ print('KS______________________________________END')
 # -*-coding:utf-8-*-
 # @auth LYY ivan
 # @time 2017年6月9日08:24:02
-# @goal test var_split
+# @goal tPatterns var_split
 
 # 所有变量分段
 import pandas as pd
@@ -1570,7 +1570,7 @@ Alt + Shift + E
 # # -*-coding:utf-8-*-
 # # @auth LYY ivan
 # # @time 2017年6月12日20:58:19
-# # @goal test var_split
+# # @goal tPatterns var_split
 # """
 #     1.DecisionTreeClassifier
 #     2.if IV <  0.1: pass
@@ -2405,5 +2405,5 @@ IMPORT
 # a = pd.DataFrame([1,2,3])
 # path = utils.out_path + '/' + utils.get_time() + '/'
 # print(a)
-# a.to_csv(utils.mkdir(path)+'test.csv')
+# a.to_csv(utils.mkdir(path)+'tPatterns.csv')
 

@@ -213,7 +213,7 @@ class Classifier(object):
         print('0%%: %.2f%%' % (data[data == 0].shape[0]/data.shape[0]*100))
 
 
-Classifier('/data/project/GitHubI/MLTools/data/test.csv')
+Classifier('/data/project/GitHubI/MLTools/data/tPatterns.csv')
 
 
 

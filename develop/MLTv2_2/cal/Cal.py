@@ -1,7 +1,7 @@
 # -*-coding:utf-8-*-
 # @auth ivan
 # @time 2017年6月19日08:14:30
-# @goal test Cal
+# @goal tPatterns Cal
 
 
 class CAL(object):

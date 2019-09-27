@@ -1,7 +1,7 @@
 # -*-coding:utf-8-*-
 # @auth LYY ivan
 # @time 2017年6月12日20:58:19
-# @goal test var_split
+# @goal tPatterns var_split
 """
 
     1.DecisionTreeClassifier
